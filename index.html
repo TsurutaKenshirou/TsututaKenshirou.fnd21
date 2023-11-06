@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>ピアノ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#000000">
+
+  <script type="text/javascript" src="modules/lodash.min.js"></script>
+  <script type="text/javascript" src="modules/test-boilerplate.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
+</head>
+
+<body>
+  <div id="whitebox">
+    <input type="text" id="textbox" name="textbox"/>
+    <input type="button" id="outputpiano" value="ピアノ放出！" onclick="drawKeyboard()"/>
+  </div>
+  <div id="keyboard" class="keyboard"></div>
+</body>
+
+</html>
