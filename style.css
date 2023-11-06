@@ -1,0 +1,32 @@
+.keyboard div {
+    position: relative;/*keyboardが親要素。relativeとabsoluteで上に乗った黒鍵盤を浮かせて重ねさせる*/
+    width: 40px;
+    height: 200px;
+    float: left;/*要素を右詰めにしていく。*/
+  }
+  
+  .keyboard button {
+    position: absolute;  /*position relativeと対。absoluteを入れることで、左詰めにならず、自由配置できるようになる。鍵盤を下ではなく横に伸ばすようにするため*/
+  }
+  
+  .white {
+    background-color: #ffffff;
+    border: 1px solid #c0c0c0;
+    width: 40px;
+    height:200px;
+  }
+  
+  .black {
+    background-color: #000000;
+    border: 1px solid #c0c0c0;
+    width: 30px;
+    height: 120px;
+    left: 25px;
+    z-index: 1;  /* z-index は重なりを決められる。0やautoが一番下 */
+  }
+
+  #whitebox {
+    width: 40px;
+    height:60px;
+    background-color: white;
+  }
