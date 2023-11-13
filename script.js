@@ -18,8 +18,8 @@ function drawKeyboard() {// 鍵盤の描画メソッド
   for (let i = 0; i < element.value; i++) {
     // 鍵盤をボタンとして作成する
     const key = document.createElement("button");//htmlのbodyタグ内にボタンを作成、これが鍵盤になる
-    // idに音階の情報を付与(スタートはC3になるようにしています)
-    key.id = `key_${musicalScaleArray[i % musicalScaleArray.length]}${Math.floor(i / 12) + 3}`;//バッククォートで囲まれている。テンプレートリテラル。
+    // idに音階の情報を付与(スタートはC3にしたい)
+    key.id = `key_${musicalScaleArray[i % musicalScaleArray.length]}${Math.floor(i / 12) + 3}`;//テンプレートリテラルで記入する
     console.log(key.id);
     //keyのidタグは　key_C3となり3オクターブ目のドが出る。i/12としているのは、12鍵盤を超えて12/12となったとき1残り、3が足されて4、
     //key_c4となり1オクターブあげることができる。
@@ -33,13 +33,13 @@ function drawKeyboard() {// 鍵盤の描画メソッド
     if (musicalScaleArray[i % 12].indexOf("#") > -1) {//indexOf 個別に抜き取られた音階Arrayの要素に#がついていたら、#の位置、1を返す。なかったら-1を返す
       console.log(musicalScaleArray[i % 12]);//i % 12 とやるとc、c#、d、d#と配列がループする。
       // 黒鍵(#がついている)
-      key.classList.add("black");//ループ処理
+      key.classList.add("black");//ループ処理　.classList.addとすればボタン（key)にclassを足せる
     } else {
       // 白鍵
       key.classList.add("white");//白鍵盤のクラスを追加する。
       baseKey = document.createElement("div");
     }
-    baseKey.appendChild(key);
+    baseKey.appendChild(key);//キーはボタンの事
     document.getElementById("keyboard").appendChild(baseKey);
   }
 } else {
